@@ -1,16 +1,24 @@
 <?php
-include_once 'classes/Person.php';
 
-$john = new Person('John', 1412.5, 1988);
+include_once 'classes/Passaro.php';
 
-echo "Nome: {$john->name}<br>";
-echo "Salário: R$ " . number_format($john->salary, 2, ',', '.') ."<br>";
-echo "Ano de Nascimento: {$john->yearOfBirth}<br>";
+$canario = new Passaro(5, 2, true);
 
-echo "<hr>";
+echo "Idade do pássaro: {$canario->idade}<br>";
+echo "Quantidade de patas: {$canario->numeroDePatas}<br>";
+echo "Pode voar? {$canario->mostrarSePodeVoar()}<br>";
 
-$mary = new Person('Mary Jane', 1500.1, 1990);
-
-echo "Nome: {$mary->name}<br>";
-echo "Salário: R$ " . number_format($mary->salary, 2, ',', '.') ."<br>";
-echo "Ano de Nascimento: {$mary->yearOfBirth}<br>";
+echo $canario->envelhecer();
+echo "Idade do pássaro: {$canario->idade}<br>";
+echo $canario->envelhecer();
+echo "Idade do pássaro: {$canario->idade}<br>";
+echo $canario->envelhecer();
+echo "Idade do pássaro: {$canario->idade}<br>";
+echo $canario->envelhecer();
+echo "Idade do pássaro: {$canario->idade}<br>";
+echo $canario->envelhecer();
+echo "Idade do pássaro: {$canario->idade}<br>";
+echo $canario->envelhecer();
+echo "Idade do pássaro: {$canario->idade}<br>";
+echo $canario->envelhecer();
+echo "Idade do pássaro antes da morte: {$canario->idade}<br>";

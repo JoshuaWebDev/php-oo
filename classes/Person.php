@@ -12,4 +12,10 @@ class Person
         $this->salary      = $salary;
         $this->yearOfBirth = $yearOfBirth;
     }
+
+    // método destrutor
+    function __destruct()
+    {
+        echo "<br>Objeto {$this->name} finalizado";
+    }
 }
