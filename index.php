@@ -1,24 +1,13 @@
 <?php
 
-include_once 'classes/Passaro.php';
+include_once 'classes/Person.php';
+include_once 'classes/Conta.php';
 
-$canario = new Passaro(5, 2, true);
+$john = new Person('John Doe', 1412.5, 1988);
 
-echo "Idade do pássaro: {$canario->idade}<br>";
-echo "Quantidade de patas: {$canario->numeroDePatas}<br>";
-echo "Pode voar? {$canario->mostrarSePodeVoar()}<br>";
+$conta = new Conta('123', '1234', $john, 500);
 
-echo $canario->envelhecer();
-echo "Idade do pássaro: {$canario->idade}<br>";
-echo $canario->envelhecer();
-echo "Idade do pássaro: {$canario->idade}<br>";
-echo $canario->envelhecer();
-echo "Idade do pássaro: {$canario->idade}<br>";
-echo $canario->envelhecer();
-echo "Idade do pássaro: {$canario->idade}<br>";
-echo $canario->envelhecer();
-echo "Idade do pássaro: {$canario->idade}<br>";
-echo $canario->envelhecer();
-echo "Idade do pássaro: {$canario->idade}<br>";
-echo $canario->envelhecer();
-echo "Idade do pássaro antes da morte: {$canario->idade}<br>";
+echo "Agência: {$conta->agencia}";
+echo "Número: {$conta->codigo}";
+echo "Titular: {$conta->titular->name}";
+echo "Salário do Titular: {$conta->titular->salary}";
