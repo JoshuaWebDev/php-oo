@@ -14,8 +14,8 @@ class Person
     }
 
     // método destrutor
-    function __destruct()
-    {
-        echo "<br>Objeto {$this->name} finalizado";
-    }
+    // function __destruct()
+    // {
+    //     echo "<br>Objeto {$this->name} finalizado";
+    // }
 }
