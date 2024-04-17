@@ -29,4 +29,9 @@ abstract class Conta
             echo "Saldo insuficiente!";
         }
     }
+
+    public function mostrarSaldo()
+    {
+        return $this->saldo;
+    }
 }
