@@ -21,15 +21,23 @@ abstract class Conta
         $this->saldo += $valor;
     }
 
+    /**
+     * @param float $valor
+     * @return string|float
+     */
     public function sacar($valor)
     {
         if ($this->saldo >= $valor) {
             $this->saldo -= $valor;
+            return $this->saldo;
         } else {
-            echo "Saldo insuficiente!";
+            return "Saldo insuficiente! Você tentou sacar {$valor} mas só tem {$this->saldo}";
         }
     }
 
+    /**
+     * @return float
+     */
     public function mostrarSaldo()
     {
         return $this->saldo;
