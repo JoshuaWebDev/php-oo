@@ -10,4 +10,20 @@ class ContaCorrente extends Conta
         parent::__construct($agencia, $codigo, $titular, $saldo);
         $this->limite = $limite;
     }
+
+    /**
+     * @param float $valor
+     * @return float|bool
+     */
+    public function sacar($valor)
+    {
+        $taxa = 0.05;
+        if ($this->saldo + $this->limite >= $valor) {
+            parent::sacar($valor);         // subrai o valor do saldo
+            parent::sacar($valor * $taxa); // subrai a taxa de saldo
+        } else {
+            echo "Não foi possível efetuar o saque!";
+            return false;
+        }
+    }
 }
