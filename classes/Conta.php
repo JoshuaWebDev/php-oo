@@ -16,6 +16,10 @@ abstract class Conta
         $this->depositar($saldo);
     }
 
+    /**
+     * @param float $valor
+     * @return void
+     */
     public function depositar($valor)
     {
         $this->saldo += $valor;
