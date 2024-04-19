@@ -1,7 +1,7 @@
 <?php
 include_once 'Conta.php';
 
-class ContaPoupanca extends Conta
+final class ContaPoupanca extends Conta
 {
     public $aniversario;
 
