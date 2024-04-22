@@ -24,4 +24,11 @@ final class ContaPoupanca extends Conta
             return false;
         }
     }
+
+    public function transferir($conta, $valor)
+    {
+        if ($this->sacar($valor)) {
+            $conta->depositar($valor);
+        }
+    }
 }

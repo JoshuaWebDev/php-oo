@@ -16,6 +16,11 @@ abstract class Conta
         $this->depositar($saldo);
     }
 
+    // assinatura do método abstrato
+    // NÃO DEVE SER IMPLEMENTADA A LÓGICA (CORPO DA FUNÇÃO)
+    // EM UM MÉTODO ABSTRATO NA SUA ASSINATURA
+    abstract function transferir($conta, $valor);
+
     /**
      * @param float $valor
      * @return void
