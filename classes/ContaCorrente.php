@@ -4,6 +4,7 @@ include_once 'Conta.php';
 class ContaCorrente extends Conta
 {
     public $limite;
+    public $taxaDeTransferencia = 2.5;
 
     function __construct($agencia, $codigo, $titular, $saldo, $limite)
     {
@@ -24,6 +25,17 @@ class ContaCorrente extends Conta
         } else {
             echo "Não foi possível efetuar o saque!";
             return false;
+        }
+    }
+
+    final function transferir($conta, $valor)
+    {
+        if ($this->sacar($valor)) {
+            $conta->depositar($valor);
+        }
+
+        if ($this->titular != $conta->titular) {
+            $conta->sacar($this->taxaDeTransferencia);
         }
     }
 }
