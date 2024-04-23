@@ -4,6 +4,7 @@ include_once 'classes/Person.php';
 include_once 'classes/ContaPoupanca.php';
 include_once 'classes/ContaCorrente.php';
 include_once 'classes/ContaPoupancaEspecial.php';
+include_once 'classes/ContaCorrenteEspecial.php';
 
 $john = new Person('John Doe', 1412.5, 1988);
 $mary = new Person('Mary Jane', 1500.1, 1990);
@@ -16,6 +17,10 @@ $cc2 = new ContaCorrente('123', '1237', $mary, 900, 1000);
 
 // $cpe = new ContaPoupancaEspecial('123', '1238', $john, 500, '2022-05-12');
 // echo "Código da Conta Poupança Especial: " . $cpe->codigo;
+
+// $cce = new ContaCorrenteEspecial('123', '1238', $mary, 800, 1200);
+// echo $cce->codigo . "<br>";
+// $cce->depositar(100);
 
 echo "<h2>Informações de Conta Poupança Nº {$cp1->codigo}</h2>";
 
