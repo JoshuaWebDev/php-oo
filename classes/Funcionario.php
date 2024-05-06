@@ -1,10 +1,10 @@
 <?php
 class Funcionario
 {
-    private $codigo;
-    public  $nome;
-    private $dataDeNascimento;
-    private $salario;
+    private   $codigo;
+    public    $nome;
+    private   $dataDeNascimento;
+    protected $salario;
 
     /**
      * Altera o valor de $codigo
