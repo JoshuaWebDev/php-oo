@@ -12,4 +12,14 @@ class Aplicacao extends Biblioteca
         $i = self::$quantidade;
         echo "Nova Aplicação nº $i: $nome<br>";
     }
+
+    // método estático
+    // lê o conteúdo do arquivo readme.txt
+    static function sobre() {
+        $fd = fopen("readme.txt", "r");
+
+        while($linha = fgets($fd, 200)) {
+            echo $linha . "<br>";
+        }
+    }
 }
