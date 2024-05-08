@@ -5,6 +5,7 @@ require_once "classes/Aplicacao.php";
 
 echo "Informações Sobre a Aplicação:<br>";
 echo "=================================================<br>";
+
 Aplicacao::sobre();
 
 // new Aplicacao('LibreOffice');
